@@ -71,10 +71,6 @@
 					<form:input path="description" type="text" class="form-control" id="intputDescription" />
 				</div>
 				<div class="form-group col-md-6">
-					<label for="inputName">Age of Vehicle</label>
-					<form:input path="age" type="date" class="form-control" id="intputDescription" />
-				</div>
-				<div class="form-group col-md-6">
 					<label for="inputName">Price</label>
 					<form:input path="price" type="number" class="form-control" id="intputDescription" />
 				</div>

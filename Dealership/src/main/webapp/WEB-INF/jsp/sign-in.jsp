@@ -62,6 +62,9 @@
 					<form:input path="password" type="text" class="form-control" id="intputMake" />
 				</div>
 				<form:button type="submit" class="btn btn-primary">Submit</form:button>
+				<c:if test="${errorMessage != null}">
+					<p style="color:red">${errorMessage}</p>
+				</c:if>
 			</form:form>
 		</main>
 

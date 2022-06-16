@@ -1,6 +1,7 @@
 package com.claim.entity;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -13,11 +14,19 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import org.springframework.data.annotation.Transient;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "person")
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name="person")
 public class Person {
 
 	@Id
@@ -33,7 +42,7 @@ public class Person {
 
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
 	@JoinColumn(name = "person_id")
-	List<Vehicle> vehicles = new ArrayList<Vehicle>();
+	List<Vehicle> vehicles;
 	
 
 	

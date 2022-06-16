@@ -18,6 +18,7 @@ import com.claim.entity.VehicleService;
 @Controller
 public class PersonController {
 
+	
 	@Autowired
 	VehicleService vehicleService;
 	
@@ -55,12 +56,15 @@ public class PersonController {
 			model.addAttribute("vehicleInventory", vehicleService.getVehicles());
 			return "list";
 		}
-		return "sign-up";
+		
+		model.addAttribute("errorMessage", "ERROR");
+		return "sign-in";
 	}
 	
 	@GetMapping("/account/{userId}")
 	public String account(@PathVariable("userId") Integer personId, Model model) {
 		Person signedInPerson = personService.getPerson(personId);
+		System.out.println(signedInPerson.getVehicles().toString());
 		model.addAttribute("person", signedInPerson);
 		model.addAttribute("vehicleInventory", vehicleService.getUserVehicles(signedInPerson));
 		return "list";

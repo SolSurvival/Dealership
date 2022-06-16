@@ -13,7 +13,7 @@ import com.claim.entity.Vehicle;
 public interface VehicleRepository extends JpaRepository<Vehicle, Integer>{
 	
 	
-	@Query("SELECT V FROM Vehicle V WHERE V.make = ?1")
+	@Query(value="SELECT * FROM vehicle V WHERE V.make = ?1", nativeQuery = true)
 	List<Vehicle> findVehicleByMake(String make);
 
 }

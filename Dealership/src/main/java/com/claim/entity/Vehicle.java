@@ -18,7 +18,7 @@ public class Vehicle {
 	@Id
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Integer id;
 	@Column(name = "make")
 	private String make;
 	@Column(name = "model")
@@ -40,7 +40,7 @@ public class Vehicle {
 	public Vehicle() {
 	}
 
-	public Vehicle(int id, String model, String make, String year, String description, Double price, Integer daysOnLot) {
+	public Vehicle(Integer id, String model, String make, String year, String description, Double price, Integer daysOnLot) {
 		this.id = id;
 		this.make = make;
 		this.model = model;

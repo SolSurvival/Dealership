@@ -66,6 +66,7 @@ public class VehicleController {
 			person = personService.getPerson(personId);
 			model.addAttribute("person", person);
 		}
+		System.out.println(personId);
 		if(vehicle == null) {
 			return "list";
 		}
